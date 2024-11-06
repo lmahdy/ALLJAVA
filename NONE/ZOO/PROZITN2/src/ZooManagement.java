@@ -85,6 +85,15 @@ public class ZooManagement {
             System.out.println("Found at index " + result);
         }
 
+        // Create objects using the default constructor
+        Terrestrial terrestrialm = new Terrestrial();
+        Penguin penguinm = new Penguin();
+
+        terrestrialm.eatMeat(Food.MEAT);
+        terrestrialm.eatPlant(Food.PLANT);
+        terrestrialm.eatPlantAndMeat(Food.BOTH);
+
+
         // Close the Scanner to avoid resource leak
         sc.close();
     }

@@ -1,4 +1,4 @@
-public abstract class Aquatic extends Animal {
+public abstract class Aquatic extends Animal implements Carnivore<Food> {
     private String habitat;
 
     public Aquatic(String family, String name, int age, boolean isMammal, String habitat) {
@@ -26,4 +26,14 @@ public abstract class Aquatic extends Animal {
     // Méthode swim pour les animaux aquatiques
     // Abstract swim method: subclasses must provide their own implementation
     public abstract void swim();
+
+    @Override
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT) {
+            System.out.println("Aquatic animal is eating meat.");
+        } else {
+            System.out.println("Aquatic animal cannot eat this food.");
+        }
+}
+
 }
